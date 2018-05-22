@@ -33,4 +33,29 @@ export class NuberLinkedList
         this.count++;
     }
 
+    removeLast(): void
+    {
+        if(this.count != 0)
+        {
+            if(this.count == 1)
+            {
+                this.head = null;
+                this.tail = null;
+            }
+            else
+            {
+                let current = this.head;
+                while(current.next != this.tail)
+                {
+                    current = current.next;
+                }
+
+                current.next = null;
+                this.tail = current;
+            }
+            
+            this.count--;
+        }
+    }
+
 }

@@ -58,4 +58,17 @@ export class NuberLinkedList
         }
     }
 
+    removeFirst(): void
+    {
+        if(this.count != 0)
+        {
+            this.head = this.head.next;
+            this.count--;
+            if(this.count == 1)
+            {
+                this.tail = null;
+            }
+        }
+    }
+
 }

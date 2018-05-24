@@ -34,7 +34,7 @@ export class NuberLinkedList
     }
 
     removeLast(): void
-    {
+    {   
         if(this.count != 0)
         {
             if(this.count == 1)
@@ -68,6 +68,15 @@ export class NuberLinkedList
             {
                 this.tail = null;
             }
+        }
+    }
+
+    *getEnumerator()
+    {
+        let current = this.head;
+        while(current.next != null)
+        {
+            yield current.value;
         }
     }
 

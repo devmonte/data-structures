@@ -80,4 +80,11 @@ export class NuberLinkedList
         }
     }
 
+    clear()
+    {
+        this.head = null;
+        this.tail = null;
+        this.count = 0;
+    }
+
 }

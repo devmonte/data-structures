@@ -1,5 +1,5 @@
-export class Node
+export class Node<T>
 {
-    value: number;
-    next: Node;
+    value: T;
+    next: Node<T>;
 }

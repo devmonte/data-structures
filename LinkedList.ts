@@ -1,12 +1,13 @@
 import {Node} from './Node';
+import { ILinkedList } from './ILinkedList';
 
-export class NuberLinkedList
+export class LinkedList<T> implements ILinkedList<T>
 {
-    head: Node;
-    tail: Node;
+    head: Node<T>;
+    tail: Node<T>;
     count: number;
 
-    addFirst(node: Node): void
+    addFirst(node: Node<T>): void
     {
         let temp = this.head;
         this.head = node;
@@ -19,7 +20,7 @@ export class NuberLinkedList
         }
     }
 
-    addLast(node: Node): void
+    addLast(node: Node<T>): void
     {
         if(this.count == 0)
         {

@@ -1,4 +1,4 @@
-import { Node } from './Node';
+import { Node } from './linkedList/node';
 
 class Main
 {

@@ -7,10 +7,10 @@ export class LinkedList<T> implements ILinkedList<T>
     tail: Node<T>;
     count: number;
 
-    addFirst(node: Node<T>): void
+    addFirst(nodeValue: T): void
     {
         let temp = this.head;
-        this.head = node;
+        this.head = new Node<T>(nodeValue);
         this.head.next = temp;
 
         this.count++;
@@ -20,17 +20,18 @@ export class LinkedList<T> implements ILinkedList<T>
         }
     }
 
-    addLast(node: Node<T>): void
+    addLast(nodeValue: T): void
     {
+        let newNode = new Node(nodeValue);
         if(this.count == 0)
         {
-            this.head = node;
+            this.head = newNode;
         }
         else
         {
-            this.tail.next = node;
+            this.tail.next = newNode;
         }
-        this.tail = node;
+        this.tail = newNode;
         this.count++;
     }
 

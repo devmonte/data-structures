@@ -11,6 +11,17 @@ export class Stack<T>
 
     push(valueToPush: T): void
     {
-        //this.list.addFirst(valueToPush);
+        this.list.addFirst(valueToPush);
+    }
+
+    pop(): T
+    {
+        if(this.list.getEnumerator.length == 0)
+        {
+            //add throwing exception
+        }
+        let value = this.list.head.value;
+        this.list.removeFirst;
+        return value;    
     }
 }

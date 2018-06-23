@@ -18,10 +18,29 @@ export class Stack<T>
     {
         if(this.list.getEnumerator.length == 0)
         {
-            //add throwing exception
+            throw new Error("No elements on stack!");
         }
         let value = this.list.head.value;
         this.list.removeFirst;
         return value;    
+    }
+
+    peek(): T
+    {
+        if(this.list.getEnumerator.length == 0)
+        {
+            throw new Error("No elements on stack!");
+        }
+        return this.list.head.value;
+    }
+
+    count(): number
+    {
+        return this.list.count;
+    }
+
+    clear(): void
+    {
+        this.list.clear();
     }
 }
